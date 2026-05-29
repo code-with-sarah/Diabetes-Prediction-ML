@@ -1,32 +1,26 @@
-#  Diabetes Prediction Using Machine Learning
+# Diabetes Prediction using Machine Learning
 
-An end-to-end Machine Learning project developed to predict the likelihood of diabetes in patients based on diagnostic clinical measurements. This project showcases data cleaning, preprocessing, feature handling, and model training workflows.
+A professional data science project that predicts the likelihood of diabetes in patients based on clinical diagnostic measurements. This model is built using Python and the Scikit-Learn library.
 
----
+## 📊 Dataset Overview
+The dataset originates from the National Institute of Diabetes and Digestive and Kidney Diseases. It contains data from female patients of Pima Indian heritage.
+* **Target Label:** `Outcome` (0 = Non-Diabetic, 1 = Diabetic)
+* **Features:** Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age.
 
-## Project Overview & Goals
-The main objective of this project is to build a predictive model that can assist healthcare professionals in identifying diabetes risks early. The pipeline handles real-world data inconsistencies (like invalid zero values) and delivers clean, structural data to a classification model.
+## 🛠️ Data Preprocessing & Refactoring
+* **Invalid Zero Handling:** Columns like Glucose, BloodPressure, SkinThickness, Insulin, and BMI contained invalid `0` values, which were treated as missing data and replaced with `NaN`.
+* **Missing Data Imputation:** Missing values were successfully imputed using the **Median** of each respective column to maintain data integrity.
+* **Code Cleanliness:** Variable names and documentation follow strict professional industry standards (Refactored from Roman Urdu to English).
 
-## 🛠️ Tech Stack & Libraries
-- **Language:** Python 3.12
-- **Environment:** Google Colab
-- **Libraries:** - `Pandas` & `NumPy` (Data Manipulation & Cleaning)
-  - `Scikit-Learn` (Model Training & Evaluation)
+## 🤖 Model & Performance
+* **Algorithm Used:** Random Forest Classifier
+* **Data Split:** 80% Training, 20% Testing
+* **Evaluation Metric:** Accuracy Score
+* **Test Accuracy:** **74.68%**
 
-## 🔄 Machine Learning Pipeline
-
-### 1. Data Cleaning & Handling Inconsistencies
-Real-world datasets often contain missing entries masked as zeros. In this dataset, variables like **Glucose, Blood Pressure, Skin Thickness, Insulin, and BMI** cannot biologically be zero. 
-- Replaced invalid `0` values with `NaN`.
-- Imputed missing values using the **Median** of each respective column to maintain data integrity without losing valuable rows.
-
-### 2. Data Splitting
-The processed dataset was split into an **80% Training set** and a **20% Testing set** using `train_test_split` to ensure robust validation and prevent overfitting.
-
-### 3. Model Training & Performance
-- **Algorithm Used:** Random Forest Classifier
-- **Overall Model Accuracy:** **74.68%**
-
+## 📂 Project Structure
+* `Diabetes_Prediction_ML_Project.ipynb` - Core Google Colab Notebook containing full pipeline.
+* `diabetes.csv` - Sourced dataset file.
 ---
 
 ## 💻 How to Run the Project
